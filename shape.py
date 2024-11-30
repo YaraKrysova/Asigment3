@@ -6,4 +6,9 @@ class Shape:
         self._color = color
 
     def addShape(self):
-        pass
+        print("(1) Rectangle (2) Triangle (3) Circle (4) Square (5) Pentagon")
+        self.shape = int(input("add: "))
+        self.color = int(input("add"))
+        self.lenght = int(input("add"))
+        self.widht = int(input("add"))
+        print(f"{self.color} {self.shape} with length {self.lenght} and width {self.widht} added")
