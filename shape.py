@@ -4,12 +4,11 @@ class Shape:
 
     shapeList = {}
 
-    #def __init__(self, color):
-        #self._color = color
+    
 
     def addType(self):      #write in "program" file branch so it would open file needed
         print("(1)Rectangle (2)Triangle (3)Circle (4)Square (5)Pentagon")
-        self.shape = int(input("Add: "))    #represents the type of shape
+        self.shape = int(input("Add: "))    #represents the type of shape as number
         self._color = input("Color: ")
         self.lenght = float(input("Length: "))       #Overwrite method in child class
         self.widght = float(input("Width: "))
@@ -35,24 +34,29 @@ class Shape:
         
         
         Shape.s_count += 1
-        self.shapeList.update({self.shape: [self._color , self.lenght, self.widght]})    #the list should be updated every time when person write new info
+        self.numberOfShape = Shape.s_count      #number of each indivisual figure
+        self.shapeList.update({self.numberOfShape: [self._color , self.lenght, self.widght]})    #the list should be updated every time when person write new info
+        return self.shapeList
 
     
     def getPerimeter(self):
         return self.edges*(self.lenght + self.widght)
     
     def getArea(self):
-        if self.shape == 1:
-            self.area = self.lenght * self.widght
+        self.area = self.lenght * self.widght
+        return self.area
 
-        
+    def deleteShape(self):
+        print("Which shape to remove?")
+        print(self.shapeList.items())
+        self.userRemoveChoice = int(input("Remove: "))
+        self.shapeList.pop(self.userRemoveChoice)
+        Shape.s_count = Shape.s_count - 1
 
-    def desription():
+    def description():
         print(f"Collection has {Shape.s_count} shapes:")
         
 
         
 
 
-#shape1 = Shape()
-#shape1.addType()
