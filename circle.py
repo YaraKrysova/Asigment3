@@ -1,4 +1,5 @@
 from shape import *
+
 class Circle(Shape):
     _radius: 0.0
 
