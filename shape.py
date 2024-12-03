@@ -15,13 +15,12 @@ class Shape:
         Shape.s_count += 1
         self.numberOfShape = Shape.s_count      #number of each indivisual figure
         self.shapeList.update({self.numberOfShape: [self._color ,self.shapeType , self.side, self.height]})    #the list should be updated every time when person write new info
-        #I gope it will see attributes
+        #I hope it will see attributes
         return self.shapeList
     
         
     
-    def getPerimeter(self):
-        pass
+
     
     def getArea(self):
         pass

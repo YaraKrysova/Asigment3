@@ -1,7 +1,9 @@
 from shape import *
 
+
 class Circle(Shape):
-    _radius: 0.0
+    _radius = 0.0
+    shapeType = "Cicle"
 
     #def __init__(self, radius):
        #self._radius = radius 
@@ -13,5 +15,9 @@ class Circle(Shape):
 
         Shape.s_count += 1
         self.numberOfShape = Shape.s_count      #number of each indivisual figure
-        self.shapeList.update({self.numberOfShape: [self._color , self.lenght, self.widght]})    #the list should be updated every time when person write new info
+        self.shapeList.update({self.numberOfShape: [self._color, self.shapeType , self._radius]})    #the list should be updated every time when person write new info
         return self.shapeList
+    
+    def getPerimeter(self):
+        area = 2* self.pi * self._radius
+        return area
