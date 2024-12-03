@@ -33,3 +33,9 @@ while running:
         print(f"Collection has {Shape.s_count} shapes:")
         shape1.description()
 
+    elif userChoice == 4:
+        pass
+
+    elif userChoice == 5:
+        running = False
+

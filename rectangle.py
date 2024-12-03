@@ -1,15 +1,30 @@
 from shape import *
 
 class Rectangle(Shape):
+    shapeType = "Rectangle"
+
+
     def addType(self):
-        self.shape = int(input("Add: "))    #represents the type of shape as number
-        self._color = input("Color: ")
-        self.lenght = float(input("Length: "))      
-        self.widght = float(input("Width: "))
-        print(f"{self._color} Rectangle with length {self.lenght} and width {self.widght} added")
+        self.shape = int(input("Add: "))    #represents the type of shape as number #Do i actually need this????
+        #I can put it in program file so I 
+        self.color = input("Color: ")
+        self.side = float(input("Side: "))      
+        self.height = float(input("Height: "))
+        print(f"{self.color} Rectangle with side {self.side} and height {self.height} added")
         self.edges = 4
 
-        Shape.s_count += 1
-        self.numberOfShape = Shape.s_count      #number of each indivisual figure
-        self.shapeList.update({self.numberOfShape: [self._color , self.lenght, self.widght]})    #the list should be updated every time when person write new info
-        return self.shapeList
+        super().addType     #Calls the same as what witten in base class
+    
+    def getPerimeter(self):
+        return 2*(self.side + self.height)
+    
+    def getArea(self):
+        return self.side * self.height * 0.5
+    
+    def description():
+        return 
+        
+    
+    
+
+    
