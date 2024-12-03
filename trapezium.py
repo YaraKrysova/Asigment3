@@ -2,6 +2,7 @@
 from shape import *
 
 class Trapezium(Shape):
+    
     def addType(self):
         self.shape = int(input("Add: "))    #represents the type of shape as number
         self.color = input("Color: ")
@@ -11,7 +12,7 @@ class Trapezium(Shape):
         self.height = float(input("Height: "))
 
         print(f"{self.color} {self.shapeType} with sides {self.side1}, {self.side2} and {self.side3}, {self.side3} and height {self.height} added")
-        self.edges = 4
+        
 
         Shape.s_count += 1
         self.numberOfShape = Shape.s_count      #number of each indivisual figure
@@ -27,4 +28,4 @@ class Trapezium(Shape):
         area = (self.side1 + self.side2) * 0.6 * self.height
         return area
     
-    
+

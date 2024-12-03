@@ -11,7 +11,7 @@ class Rectangle(Shape):
         self.color = input("Color: ")
         self.side = float(input("Widht: "))      
         self.height = float(input("Lenght: "))
-        print(f"{self.color} {self.shapeType} with widht {self.side} and lenght {self.height} added")
+        print(f"{self.color} {self.shapeType} with with sides {self.side} and lenght {self.height}")
         self.edges = 4
 
         super().addType     #Calls the same as what witten in base class
