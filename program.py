@@ -6,7 +6,7 @@ from rectangle import *
 from square import *
 from triangle import *
 
-running = True
+running = ""
 
 
 while running:
@@ -20,12 +20,16 @@ while running:
         except ValueError:
             print("Not an option")
 
+
+        #call each file in brancing like shape1= Circle(), so on
     if userChoice == 1:
+        print("(1)Rectangle (2)Triangle (3)Circle (4)Square (5)Pentagon")
         shape1.addType()
 
     elif userChoice == 2:
         shape1.deleteShape()
 
-    elif "ESCAPE":
-        break
+    elif userChoice == 3:
+        print(f"Collection has {Shape.s_count} shapes:")
+        shape1.description()
 
