@@ -19,5 +19,11 @@ class Circle(Shape):
         return self.shapeList
     
     def getPerimeter(self):
-        area = 2* self.pi * self._radius
+        perimeter = 2* self.pi * self._radius
+        return perimeter
+    
+
+    def getArea(self):
+        area = self.pi * self._radius * self._radius
         return area
+

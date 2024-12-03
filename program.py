@@ -1,7 +1,7 @@
 # Asigment3
 from shape import *
 from circle import *
-from pentagon import *
+from trapezium import *
 from rectangle import *
 from square import *
 from triangle import *
@@ -37,5 +37,6 @@ while running:
         pass
 
     elif userChoice == 5:
+        print("See you again")
         running = False
 

@@ -11,16 +11,20 @@ class Rectangle(Shape):
         self.color = input("Color: ")
         self.side = float(input("Widht: "))      
         self.height = float(input("Lenght: "))
-        print(f"{self.color} Rectangle with widht {self.side} and ;eght {self.height} added")
+        print(f"{self.color} {self.shapeType} with widht {self.side} and lenght {self.height} added")
         self.edges = 4
 
         super().addType     #Calls the same as what witten in base class
     
     def getPerimeter(self):
-        return 2*(self.side + self.height)
+        perimeter = 2*(self.side + self.height)
+        return perimeter
     
     def getArea(self):
-        return self.side * self.height * 0.5
+        area = self.side * self.height * 0.5
+        return area
+    
+
     
     
         

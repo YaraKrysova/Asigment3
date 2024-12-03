@@ -18,9 +18,6 @@ class Shape:
         #I hope it will see attributes
         return self.shapeList
     
-        
-    
-
     
     def getArea(self):
         pass
