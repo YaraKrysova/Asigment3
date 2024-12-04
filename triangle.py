@@ -1,6 +1,6 @@
 from shape import *
 
-class Rectangle(Shape):
+class Triangle(Shape):
 
     shapeType = "Triangle"
 

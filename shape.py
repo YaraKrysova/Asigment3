@@ -1,11 +1,13 @@
 import math
 
+
 class Shape:
     s_count = 0
     _color = ""
     shapeType = ""
     edges = 0       #needs for counting perimeter
     side = 0.0
+    deletedShapes = 0
 
 
     shapeList = {}
@@ -30,10 +32,24 @@ class Shape:
         print(self.shapeList.items())
         self.userRemoveChoice = int(input("Remove: "))
         self.shapeList.pop(self.userRemoveChoice)
-        Shape.s_count = Shape.s_count - 1
+        deletedShapes =+ 1
+        return deletedShapes
 
-    def description():
-        pass
+    def description(self):
+        print(f"Collection has {Shape.s_count} shapes:")
+        for key in self.shapeList.keys():
+            print(f"{key} for {[key]}")
+        while userChoice == None:
+            userChoice = int(input("Pick a shape: "))
+        return userChoice
+    
+    def displayInfo(self):
+        print(f"Collection has {Shape.s_count} shapes:")
+        print(f"Number of shapes created for collection: {Shape.s_count}")
+        print(f"Number of shapes removed from collection: ")
+
+
+
 
 
 
