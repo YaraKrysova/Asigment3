@@ -3,52 +3,34 @@ import math
 
 class Shape:
     s_count = 0
-    _color = ""
-    shapeType = ""
-    edges = 0       #needs for counting perimeter
-    side = 0.0
     deletedShapes = 0
-
-
     shapeList = {}
 
-    
-
-    def addType(self):      #write in "program" file branch so it would open file needed
-        
+    def addType(self):
         Shape.s_count += 1
-        self.numberOfShape = Shape.s_count      #number of each indivisual figure
-        self.shapeList.update({self.numberOfShape: [self._color ,self.shapeType , self.side, self.height]})    #the list should be updated every time when person write new info
-        #I hope it will see attributes
+        self.numberOfShape = Shape.s_count
         return self.shapeList
-    
-    def getPerimeter(self):
-        perimeter = self.edges * self.side
-        return perimeter
-    
 
     def deleteShape(self):
         print("Which shape to remove?")
         print(self.shapeList.items())
-        self.userRemoveChoice = int(input("Remove: "))
-        self.shapeList.pop(self.userRemoveChoice)
-        deletedShapes =+ 1
-        return deletedShapes
+        userRemoveChoice = int(input("Remove: "))
+        if userRemoveChoice in self.shapeList:
+            self.shapeList.pop(userRemoveChoice)
+            Shape.deletedShapes += 1
+            print(f"Shape {userRemoveChoice} removed.")
+        else:
+            print("Invalid choice.")
 
     def description(self):
         print(f"Collection has {Shape.s_count} shapes:")
-        for key in self.shapeList.keys():
-            print(f"{key} for {[key]}")
-        while userChoice == None:
-            userChoice = int(input("Pick a shape: "))
-        return userChoice
-    
+        for key, value in self.shapeList.items():
+            print(f"{key}: {value}")
+
     def displayInfo(self):
-        print(f"Collection has {Shape.s_count} shapes:")
-        print(f"Number of shapes created for collection: {Shape.s_count}")
-        print(f"Number of shapes removed from collection: ")
-
-
+        print(f"Total shapes created: {Shape.s_count}")
+        print(f"Shapes currently in collection: {len(self.shapeList)}")
+        print(f"Shapes removed from collection: {Shape.deletedShapes}")
 
 
 
